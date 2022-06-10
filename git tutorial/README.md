@@ -4,20 +4,27 @@
 gitlab需架設一台伺服器
 ---
 ## 前置作業
-* 安裝vscode
-* 安裝git
-1. 安裝vscode
+1. 安裝vscode(使用vscode可以更加輕易地使用git的基本動作，如果你很愛打commandline的話不用也行)
 2. 安裝git
-大致步驟可參照https://books.bod.idv.tw/2019/10/visual-studio-code-vs-code-git.html
-
+大致步驟可參照 : https://books.bod.idv.tw/2019/10/visual-studio-code-vs-code-git.html
+---
 ## git與github入門教學(包含add commit push clone指令)
 
 請參考 : https://www.youtube.com/watch?v=Zd5jSDRjWfA  
 
 ---  
-## 常用指令
 
-* init(初始化，建立好一個repository)
+### 若是第一次要commit，需要先設定好姓名和email(可隨意設定，但必要)  
+getting start : https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+1. cd到本地端的repository下，即你gitclone的資料夾  
+2. 設定姓名和email
+```
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+```  
+---
+## 基本指令  
+* init(直接在本地端，建立好一個repository)，會發現出現一個.git資料夾，如果clone別人的repositoy就不用做這個動作
 ```
 git init
 ```
@@ -91,4 +98,4 @@ git status (看目前git狀態)
 git branch (看所有branch，-a看包含remote上的所有branch)
 ```
 
-可以參考簡單圖解https://backlog.com/git-tutorial/tw/stepup/stepup1_1.html
+可以參考簡單圖解 : https://backlog.com/git-tutorial/tw/stepup/stepup1_1.html

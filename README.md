@@ -1,6 +1,6 @@
 ## tutorial_ishiya
 ---
-## 學習方式  
+## 如何學習一項新技術  
 1. 先了解自己的需求  
     * 工作需要or跳槽(對方要求)or我是技術控
 2. 看看是否能使用傳統(原本的)技術解決  
@@ -11,5 +11,6 @@
 5. 寫快速入門案例(基本程序,ex:crud)
 6. 開始研究技術的注意事項、使用細節、使用規範、如何優化
 ---
-## 學一下markdown語法
+## 學一下markdown語法  
+搞軟體怎麼可以不會markdown呢?  
 請參考 : https://wcc723.github.io/development/2019/11/23/ten-mins-learn-markdown/
