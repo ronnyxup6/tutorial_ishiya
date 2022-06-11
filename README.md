@@ -1,4 +1,4 @@
-## tutorial_ishiya
+## tutorial_教ishiya
 ---
 ## 如何學習一項新技術  
 1. 先了解自己的需求  
