@@ -60,3 +60,26 @@ DDR1234皆是很常見的DIMM
 ## System Bus
 
 系統匯流排，是一個單獨的電腦匯流排
+
+## RDIMM & UDIMM
+
+什麼是RDIMM？什麼又是UDIMM呢？
+Intel 5500系列至強CPU2009年3月份推出，大家在為該系列CPU選購主機板時應該可以看到記憶體支援選項一般都是2種，一種是支持48G、一種是24G，同一個伺服器主機板怎麼會是兩種不同容量的記憶體支援呢？秘密就在記憶體類型一個是RDIMM，一個是UDIMM。
+
+那什麼是RDIMM？什麼又是UDIMM呢？
+RDIMM即Registered DIMM，表示控制器輸出的位址和控制信號經過Reg寄存後輸出到DRAM晶片，控制器輸出的時鐘信號經過PLL後到達各DRAM晶片。
+UDIMM即Unbuffered DIMM，表示控制器輸出的位址和控制信號直接到達DIMM上的DRAM晶片。
+
+RDIMM：
+registered DIMM（Registered Dual In-line Memory Module），帶寄存器的雙線記憶體模組。Registered記憶體本身有兩種工作模式，即 Registered模式和Buffered模式。在支援Registered工作模式的主機板上工作時，Registered記憶體工作於 Registered模式，這時主機板上的位址信號和控制信號會比資料信號先一個時鐘週期到達DIMM，送入Register晶片後會在其中停留一個時鐘週期，然後在下一個時鐘信號的上升沿從Register輸出，與此時從主機板上到達DIMM的資料信號一起同時傳送到SDRAM。當Registered記憶體工作在普通的主機板上時，為Buffered工作模式，這時所有的信號也基本上是同時到達DIMM再同時傳送到SDRAM，Register晶片這時在功能上只相當於一個簡單的Buffer，其輸入到輸出之間是直通的，只簡單的起到改善位址信號和控制信號的作用，時序上與Unbuffered記憶體是一樣的。 （一般用於伺服器）
+UDIMM:
+無緩衝雙通道記憶體模組 (Unbuffered Dual In-Line Memory Modules，UDIMM).（一般常用的記憶體條，用於一般家商用）
+
+## 緩衝區主記憶體(額外補充)
+緩衝區主記憶體（Buffered Memory）是指暫存器主記憶體的一個早期術語。該緩衝區是放在主記憶體與主記憶體控制器之間。一般來說，暫存器主記憶體不能放在非暫存器主記憶體的插槽中使用，但同步動態隨機存取記憶體（SDRAM）則可以。
+
+全緩衝DIMM （FB-DIMM）模組是用於一些主記憶體容量很大的系統。在普通的暫存器/緩衝區主記憶體中，只有控制線被緩衝，而在全緩衝主記憶體中，資料線也被緩衝，所有傳輸都以序列方式進行；每個FB-DIMM模組上的附加邏輯晶片將序列輸入轉換為驅動主記憶體晶片所需的並列訊號。[5]
+
+低負載DIMM（Load Reduced DIMM，LRDIMM）模組與暫存器/緩衝區主記憶體類似，LRDIMM模組緩衝控制線和資料線，同時保持所有訊號的並列特性。因此，LRDIMM主記憶體能提供整體來說最大的主記憶體容量，同時解決序列與並列訊號轉換引起的FB-DIMM主記憶體的一些效能和功耗問題。[6]
+
+FB-DIMM和LRDIMM型號的主記憶體主要是為控制指定時間內流入和流出主記憶體晶片的電流量而設計。這與暫存器/緩衝區主記憶體不相容，其主機板通常也不接受其他任何類型的主記憶體。
